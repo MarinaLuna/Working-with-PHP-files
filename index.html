@@ -1,0 +1,123 @@
+<!DOCTYPE HTML> 
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Лабораторная работа №3</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		
+				<div class="blok">
+					<div style="display: flex; flex-direction: column; padding-bottom: 20px;">
+						<form method="post" action="upload.php"  enctype="multipart/form-data">
+							<h2>Загрузка файла</h2>
+							
+								<p>Выберите файл</p><input name="uploadFile" style="margin-top: 10px;" type="file">
+								<input style="margin-left: 20px; background-color:#C0C0C0;" type="submit" value="Загрузить">
+							
+						</form>
+					</div>						
+				</div>
+
+
+			<div class="blok">
+				<h1><b>Дистанционное обучение</b></h1>
+				<form action="main.php" method="post">
+				
+				<div style="display: flex; flex-direction: column;">
+					<h2><em>Личные данные</em></h2>
+					
+							<label for="familia">Фамилия</label>
+							<input type="text" placeholder="Иванов" name="familia"><span></span>
+						
+							<label for="name">Имя</label>
+							<input type="text" placeholder="Иван" name="name"><span></span>
+						
+							<label for="otchestvo">Отчество</label> 
+							<input type="text" placeholder="Иванович" name="otchestvo"/>
+						
+							<label for="databd">Дата рождения</label> 
+							<input type="date" name="databd"/>
+						
+							<label for="nompas">Номер паспорта</label> 
+							<input type="text" name="nompas"/>
+						
+							<label for="number">Номер телефона</label> 
+							<input type="text" placeholder="+7" name="number"/>
+							
+							<label for="login">Логин (номер студенческого билета)</label> 
+							<input type="text" placeholder="___:___^___*___" name="login"/>
+							
+							<label for="mail">E-mail</label> 
+							<input type="text" placeholder="ivan@mail.ru" name="mail"/>
+									
+				</div>
+
+									
+
+				<div style="display: flex; flex-direction: column;">
+					<h2><em>Обучение</em></h2>
+					
+							<label for="data">Выберите дату начала обучения</label> 
+							<input type="date" name="data"/>
+							<br>
+						  <select size="1" name="spect" required>
+						  	  <option selected disabled>Выберите курс обучения</option>
+						      <option value="Разработка сайтов">Разработка сайтов</option>
+						      <option value="Разработка мобильных приложений">Разработка мобильных приложений</option>
+						      <option value="Анимация">Анимация</option>
+						      <option value="UX/UI дизайн">UX/UI дизайн</option>
+						  </select>						
+							<br>
+							<label for="question">Выберите срок обучения</label>
+							<div style="display: flex;">
+								<input type="radio" name="question" required value="a1"><p>Сокращенное(3 мес.)</p>
+								<input type="radio" name="question" value="a2"><p>Полное(8 мес.)</p>
+							</div>
+							
+							<label for="payment">Выберите способ оплаты</label>
+							<div style="display: flex;">
+								<input type="radio" name="payment" required value="money"><p>Наличные</p>
+								<input type="radio" name="payment" value="card"><p>Банковская карта</p>
+							</div>							
+							
+				</div>
+
+
+				<div style="display: flex; flex-direction: column;">
+					<h2><em>Дополнительная информация</em></h2>	
+					
+							<label for="dop">Какое образование Вы имеете на данный момент?</label>						
+							
+							<div style="display: flex;">
+								<input type="checkbox" name="dop[0]" value="a1"><p>Высшее</p>
+								<input type="checkbox" name="dop[1]" value="a2"><p>СПО</p> 
+								<input type="checkbox" name="dop[2]" value="a3"><p>Закончил(а) школу</p> 								
+							</div>
+							
+							<label for="zam">Ваши достижения</label>
+							<textarea name="zam" rows="5" wrap="hard" placeholder="Ваши достижения"></textarea>	
+					
+				</div>
+				
+				
+				<div style="display: flex; flex-direction: column;">
+					<h2><em>Бонусная программа</em></h2>	
+					
+							<label for="promo">Промокод</label>
+							<input type="text" name="promo"><span></span>
+					
+				</div>
+				<br>
+				<div class="btn">
+					<input type="submit" class="btn1" name="send" value="Оплата">
+					<input type="reset" class="btn1" name="clear" value="Очистить">					
+				</div>
+	
+				</form>	
+	
+			</div>
+
+	</body>
+</html>
+
